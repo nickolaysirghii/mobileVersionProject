@@ -1,27 +1,15 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,900&family=Nunito:wght@800&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Montserrat;
 }
-body {
+
+.App {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    border: 2px solid green;
+    padding-top: 10.4vw;
 }
-.container{
-    padding-top: 121px;
-    background-color: white;
-}
-.wraper{
-    position: fixed;
-    top: 0;
-    z-index: 12;
-    background: linear-gradient(  white 70% , transparent);
-}
-
-

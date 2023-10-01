@@ -1,0 +1,7 @@
+.randomeSaleContainer{
+    width: 89.3vw;
+    height: 33vw;
+    border: 1px solid red;
+    background-image: url(../../../public/images/sale11.png);
+    background-size: contain;
+}

@@ -1,47 +1,19 @@
 
 import './App.css';
 import Header from './components/1Header/Header';
-import Footer from './components/Z_Footer/Footer';
-import { pagesData } from "./routes";
-import { Route, Routes } from 'react-router-dom';
-import { useSelector , useDispatch } from 'react-redux';
-import { changeAnimation , changePosition} from './reduxStore/Slices/animation';
+import Sale from './components/sale/Sale';
+import Catalog from './components/catalog/Catalog';
+import GetSale from './components/getSale/GetSale';
+import RandomeSale from "./components/randomeSale/RandomeSale"
+import Footer from './components/z_Footer/Footer';
+
 
 function App() {
-
-  const dispatcher = useDispatch();
-  const { apear } = useSelector((state)=>state.animation);
-  const { sendStatus  } = useSelector((state)=>state.allProducts);
-
-  if(apear){setTimeout(() => {dispatcher(changeAnimation(false))}, 1000);}
-  
-    const getEvent = (e)=>{
-     const position = {
-           top: e.screenY - e.nativeEvent.layerY - 310,
-           get_class: e.target.className,
-           image: e.target.id,
-           left: e.target.offsetParent.offsetLeft       
-                  };
-      dispatcher(changePosition(position))
-    };
-    
   return (
-    <div className="App" onClick={getEvent} >
-      <div className='container' style={ sendStatus ? { width: "100vw",
-                                                        height: "100vh",
-                                                        overflow: "hidden"} : {}} >
-            <div className='wraper'>
-              <Header className='headerFixed'/>
-           </div>
-                <Routes>
-                  {
-                    pagesData.map((elem,idx)=>{
-                     return <Route key={idx} path={elem.path} Component={elem.element} />
-                    })
-                  }
-               </Routes>
-           <Footer />
-      </div>
+    <div className="App">
+     <Header />
+     <Footer />
+
     </div>
   );
 }

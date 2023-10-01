@@ -1,73 +1,38 @@
-import React , { useEffect } from 'react';
+import React from 'react';
 import "./header.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars} from '@fortawesome/free-solid-svg-icons';
 import bag from "../../svg/bag.svg";
-import { Link } from 'react-router-dom';
-import { useDispatch , useSelector } from "react-redux";
-import { fetchProducts } from '../../reduxStore/Slices/fetchProductsAll';
-import { fetchCategoryes } from '../../reduxStore/Slices/fetchCategries';
-
-
-
 
 const Header = () => {
+ const mob = window.innerWidth > 800 ? "" : "mob";
 
-const dispatcher = useDispatch();
-const {cartAmount , circleAmount} = useSelector((state)=>state.allProducts);
-const { sendStatus  } = useSelector((state)=>state.allProducts);
-const {top, left, productImage , targetClasses , apear } = useSelector((state)=>state.animation);
-useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes());},[]);
+//  console.log(`window.screen.width - ${window.screen.width}`);
+//  console.log(`window.screen.height - ${window.screen.height}`);
+// console.log(`window.screen.availWidth - ${window.screen.availWidth}`);
+// console.log(`window.screen.availHeight - ${window.screen.availHeight}`);
+// console.log(`window.outerWidth - ${window.outerWidth}`);
+// console.log(`window.outerHeight - ${window.outerHeight}`);
+// console.log(`window.innerWidth - ${window.innerWidth}`);
+// console.log(`window.innerHeight - ${window.innerHeight}`);
+// console.log(`document.documentElement.clientWidth - ${document.documentElement.clientWidth}`);
+// console.log(`document.documentElement.clientHeight - ${document.documentElement.clientHeight}`);
+// console.log(`document.documentElement.scrollWidth - ${document.documentElement.scrollWidth}`);
+// console.log(`document.documentElement.scrollHeight - ${document.documentElement.scrollHeight}`);
 
-return (
-    <div className='headerContainer'>
-        <header className='header'>
-              <Link to="/" className='logo'></Link>
-              <Link to="/categories"><button>Catalog</button></Link>
-              <div className='links'>
-                   <Link to="/">Main Page</Link>
-                   <Link to="/products/all" className='products'>All products</Link>
-                   <Link to="/sales/all">All sales</Link>
-              </div>
-              <Link to="/cart"><img src={bag} alt='bag' className='bag'/></Link>
-              <div className={cartAmount > 0 ? "cartAmount" : "cartHidden"}>{cartAmount}</div>
-             
-                  {
-                   apear && <div className='swallow'><div>{cartAmount}</div></div>
-                  }
-                
-            {
-               ( targetClasses === "NewButton" ||
-                 targetClasses === "toCart"    ||
-                 targetClasses === "showNewButton" ) && apear && 
-                 <div style={{top:`${targetClasses    === "toCart" ? (top -17) : top}px`,
-                              left:`${targetClasses   === "toCart" ? (left +15) : left}px`,
-                              width:`${targetClasses  === "toCart" ? "710" : 300}px`,
-                              height:`${targetClasses === "toCart" ? "710" : 300}px`,
-                              backgroundImage: `url(http://localhost:3333${productImage})`,
-                              backgroundSize: "contain",
-                              backgroundRepeat: "no-repeat"}}
-                      className='animationElem'></div>
-           }
-
-        </header>
-        {
-        sendStatus && <div className='fallingCircleContainer'>
-                          <div className='fallingCircle'>{circleAmount}</div>
-                     </div>
-        }
-        {
-          sendStatus && <div className='theBee'>
-            <div className='bzzCover'></div>
-            <div className='The_bee'>
-           <div className='DownPart'></div>
-           <div className='head'></div>
-           <div className='backHead'></div>
-           <div className='beeBack'></div>
-           <div className='leftWing'></div>
-           <div className='rihtWing'></div>
+  return (
+    <div className={`${mob}HeaderContainer`}>
+        <FontAwesomeIcon className={`${mob}Bar`} icon={faBars}/>
+        <div className={`${mob}HeaderLogo`}></div>
+        <div className={`${mob}HeaderCatalog`}>Catalog</div>
+        <div className={`${mob}Ankers`}>
+           <a>Main page</a>
+           <a>All products</a>
+           <a>All sales</a>
         </div>
-          </div>
-        }
-        </div>
+        <img src={bag} alt='Bag' className={`${mob}Bag`}/>
+        
+    </div>
   )
 }
 
