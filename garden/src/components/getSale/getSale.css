@@ -1,7 +1,0 @@
-.getSaleContainer{
-    width: 89.3vw;
-    height: 29.6vw;
-    border: 1px solid red;
-    background-image: url(../../../public/images/sale1.png);
-    background-size: contain;
-}

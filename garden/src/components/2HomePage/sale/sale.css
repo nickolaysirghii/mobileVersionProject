@@ -1,0 +1,75 @@
+.saleContainer{
+    padding: 0 58vw 8.5vw 0;
+    background-color: #A1E2EB;
+    background-size: contain;
+    position: relative;
+}
+.mobsaleContainer{
+    margin-top: 3.5vw;
+    padding: 0 48vw 14vw 0;
+    background-color: #A1E2EB;
+    background-size: contain;
+    position: relative;
+}
+.NewSaleBush{
+    background-image: url(../../../../public/images/bush.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 42vw;
+    width: 40vw;
+    position: absolute;
+    top: -4vw;
+    right: -0.2vw;
+}
+.mobNewSaleBush{
+    background-image: url(../../../../public/images/bush.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 62vw;
+    width: 60vw;
+    position: absolute;
+    top: -7vw;
+    right: -1.6vw;
+}
+.NewSaleTitle span{
+    font-size: 5vw;
+    font-weight: 900;
+}
+.mobNewSaleTitle span{
+    font-size: 10vw;
+    font-weight: 900;
+}
+.NewSaleTitle{
+    color: white;
+    font-size: 4.2vw;
+    margin:8.3vw 3vw 4vw;
+    font-weight: 800;
+}
+.mobNewSaleTitle{
+    color: white;
+    font-size: 5.9vw;
+    margin:8.3vw 3vw 4vw;
+    font-weight: 800;
+}
+.saleContainer button{
+    margin-left: 3vw;
+    height: 5vw;
+    width: 10vw;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1.6vw;
+    font-weight: 900;
+    cursor: pointer;
+}
+.mobsaleContainer button{
+    margin-left: 3vw;
+    height: 10vw;
+    width: 27vw;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 3.6vw;
+    font-weight: 900;
+    cursor: pointer;
+}
