@@ -22,7 +22,8 @@ const closeBarr = ()=>{
   return (
     <div className={`${mob}HeaderContainer`}>
         <div onClick={closeBarr}  className={BarrClass}><HeaderBar /></div>
-        <FontAwesomeIcon onClick={barFunction} className={`${mob}Bar`} icon={faBars}/>
+        <FontAwesomeIcon className={`${mob}Bar`} icon={faBars}/>
+        <div onClick={barFunction} className={`${mob}classCover`}></div>
         <div className={`${mob}HeaderLogo`}></div>
         <div className={`${mob}HeaderCatalog`}>Catalog</div>
         <div className={`${mob}Ankers`}>

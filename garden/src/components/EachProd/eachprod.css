@@ -1,0 +1,7 @@
+.eachProdContainer{
+    width: 89vw;
+    height: 70vw;
+    border: 1px solid red;
+    background-image: url(../../../public/images/EachProd.png);
+    background-size: contain;
+}
