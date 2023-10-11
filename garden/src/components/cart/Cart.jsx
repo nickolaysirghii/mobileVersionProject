@@ -10,7 +10,7 @@ const Cart = () => {
     <h2 className={`${mob}ShoppingCart`}>Shopping cart</h2>
     <div className={`${mob}StoreBelow`}>
         <div className={`${mob}StoreElements`}>
-            <p className={`${mob}backToStore`}>Back to the store +</p>
+            <p className={`${mob}backToStore`}>Back to the store<div></div></p>
             {
                 CartElems.map((elem,idx)=>{
                     return <EachCart key={idx}  data={elem}/>

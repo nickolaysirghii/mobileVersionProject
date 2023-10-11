@@ -1,6 +1,5 @@
 .cartMainContainer{
-    background-image: url(../../../public/images/Cart.png);
-    background-size: contain;
+    color: black;
 }
 .ShoppingCart{
     padding: 2.4vw 68vw 1vw 2vw;
@@ -18,22 +17,41 @@
 }
 .StoreElements{
     min-height: 52vw;
-    border: 1px solid;
+    padding-left: 1.5vw;
 }
 .mobStoreElements{
     min-height: 52vw;
-    border: 1px solid;
 }
 .backToStore{
-    padding: 0 1vw 2vw 40vw;
+    padding: 0 1vw 2vw 37vw;
     font-size: 1.3vw;
     font-weight: 900;
+    display: flex;
+    align-items: center;
 
 }
+.backToStore > div{
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-left: 1vw;
+    background-image: url(../../../public/images/leftAngle.png);
+    background-size: contain;
+    cursor: pointer;
+}
+.mobbackToStore > div{
+    width: 6.5vw;
+    height: 6.5vw;
+    margin-left: 1vw;
+    background-image: url(../../../public/images/leftAngle.png);
+    background-size: contain;
+    cursor: pointer;
+}
 .mobbackToStore{
-    padding: 0 1vw 2vw 67vw;
-    font-size: 2.3vw;
+    padding: 0 1vw 2vw 44vw;
+    font-size: 4.3vw;
     font-weight: 900;
+    display: flex;
+    align-items: center;
 
 }
 .CartBuy{
